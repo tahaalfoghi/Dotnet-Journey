@@ -5,7 +5,7 @@ using MyClasses.Models;
 namespace First_Csharp.Basic_and_OOP
 {
 
-    public class OperatorOverloading
+    public class Test_Main
     {
         public static void Main(String[] args)
         {
@@ -86,4 +86,5 @@ namespace First_Csharp.Basic_and_OOP
 			return new Money(--value);
 		}
 	}
+
 }
