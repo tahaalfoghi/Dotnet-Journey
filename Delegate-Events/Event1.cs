@@ -18,9 +18,9 @@ namespace First_Csharp.Basic_and_OOP
 
             market_management.OnProfit+=Market_OnProfit;  // Subscribe to the event
 
-			      market_management.ChangeProfit(market,100000);   // Up 
-			      market_management.ChangeProfit(market, -4000);   // Down
-			      market_management.ChangeProfit(market, 14000);   // Up
+	    market_management.ChangeProfit(market,100000);   // Up 
+            market_management.ChangeProfit(market, -4000);   // Down
+            market_management.ChangeProfit(market, 14000);   // Up
             market_management.ChangeProfit(market,0.0);  // No Change
 
             market_management.OnProfit-=Market_OnProfit; // Unsubscripe to the event
@@ -32,7 +32,7 @@ namespace First_Csharp.Basic_and_OOP
         }
 
         /* Event Handler Method */
-		private static void Market_OnProfit(Market market,double oldprofit)
+	private static void Market_OnProfit(Market market,double oldprofit)
         {
             string? sign = "";
             if(market.Profit > oldprofit)
@@ -54,7 +54,7 @@ namespace First_Csharp.Basic_and_OOP
         }
 	}
     
-	public class MarketManagement
+    public class MarketManagement
     {
 
 		public delegate void PorfitHandler(Market market, double oldprofit);
@@ -67,7 +67,8 @@ namespace First_Csharp.Basic_and_OOP
 			OnProfit?.Invoke(market, oldprofit); // Firing The Event
 		}
 	}
-	public class Market
+	
+    public class Market
     {
         private readonly string? _name;
         private double _profit { get; set; }
